@@ -23,6 +23,14 @@ change is the inclusion of relevant stylesheets and javascript.
 * math in comments is not correctly transformed, or at least,
   [mathjax](http://www.mathjax.org/) doesn't think it is.
 
+### Acknowledgement (and for future reference)
+
+This is the first time I've needed to write any PHP. I would have had a much
+more miserable time getting the stylesheets and javascript I needed included
+correctly had I not found a [tutorial by Japh
+Thomson](http://code.tutsplus.com/articles/how-to-include-javascript-and-css-in-your-wordpress-themes-and-plugins--wp-24321)
+that directed me to the necessary incantations.
+
 ## Original README
 
 Contributors: ryanimel
