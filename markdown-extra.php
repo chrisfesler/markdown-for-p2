@@ -211,7 +211,7 @@ class Markdown_Parser {
     #add_action( 'wp_enqueue_scripts', 'load_md_scripts' );
 
     $cmd = "/usr/local/bin/pandoc -r markdown -w html --mathjax --no-highlight 2>&1";
-    # --highlight-style=kate 
+    # --highlight-style=kate
 
     $descriptorspec = array(
        0 => array("pipe", "r"),

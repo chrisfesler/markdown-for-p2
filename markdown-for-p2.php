@@ -1,21 +1,21 @@
 <?php
-/* 
+/*
 Plugin Name: Markdown for P2
 Plugin URI: http://wordpress.org/extend/markdown-for-p2
 Description: Markdown for P2 will enable Markdown formatting within your P2 theme status updates and comments.
 Version: 0.1.1
 Author: Ryan Imel
 Author URI: http://wpcandy.com
-License: GPL 
+License: GPL
 
-PHP Markdown & Extra  
-Copyright (c) 2004-2009 Michel Fortin  
-<http://michelf.com/>  
+PHP Markdown & Extra
+Copyright (c) 2004-2009 Michel Fortin
+<http://michelf.com/>
 All rights reserved.
 
-Based on Markdown  
-Copyright (c) 2003-2006 John Gruber   
-<http://daringfireball.net/>   
+Based on Markdown
+Copyright (c) 2003-2006 John Gruber
+<http://daringfireball.net/>
 All rights reserved.
 
 */
