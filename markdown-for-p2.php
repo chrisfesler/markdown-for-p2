@@ -47,9 +47,6 @@ function load_md_scripts() {
   wp_enqueue_script( 'mathjax', 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', false );
   wp_enqueue_script( 'highlight_js', plugins_url( '/lib/highlight/highlight.pack.js', __FILE__ ), false );
   wp_enqueue_style( 'highlight_css', plugins_url( '/lib/highlight/styles/solarized_light.css', __FILE__ ), false );
-  #wp_enqueue_style( 'solarized', '/css/pandoc_kate_solarized.css', false );
-  ## <link rel="stylesheet" href="">
-  #<script src=""></script>
 }
 
 add_action( 'wp_enqueue_scripts', 'load_md_scripts' );
