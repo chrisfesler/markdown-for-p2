@@ -18,11 +18,6 @@ change is the inclusion of relevant stylesheets and javascript.
       hardcoded (meta-TODO: add a link)
     * could allow specification of the highlightjs style (currently
       solarized light)
-* highlightjs initialization is done in a [super janky
-  way](https://github.com/chrisfesler/markdown-for-p2/blob/master/markdown-extra.php#L211-L212)
-  that is not only embarrassing, but broken -- it only activates when you
-  refresh the page. Blech. What we really want is for it to trigger whenever
-  you make a change (e.g., post a comment).
 
 ### Acknowledgement (and for future reference)
 

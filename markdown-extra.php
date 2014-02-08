@@ -209,7 +209,11 @@ class Markdown_Parser {
         $return_value = proc_close($process);
 
         # this is probably totally the wrong way to initialize highlightjs, but it works
-        return '<script>hljs.initHighlightingOnLoad();</script> ' . $md_out;
+        # The relevant highlightjs lines are:
+        #   https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js#L552-L559
+        # I'm kind of tempted to try to grab the right elements and call highlightBlock
+        # myself, but I'm just not that cool. This works.
+        return '<script><!-- hljs.initHighlighting.called = false; hljs.initHighlighting(); --></script> ' . $md_out;
     }
     else {
       return "fail";
