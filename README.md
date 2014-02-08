@@ -20,9 +20,6 @@ change is the inclusion of relevant stylesheets and javascript.
   of the unmodified plugin.
 * math in comments is not correctly transformed, or at least,
   [mathjax](http://www.mathjax.org/) doesn't think it is.
-* code in comments is not highlighted
-* inclusion of a [custom highlightjs package](http://highlightjs.org/download/)
-  that knows all the languages I care about (FIX, TeX, clojure, etc.)
 
 ## Original README
 
