@@ -12,10 +12,12 @@ change is the inclusion of relevant stylesheets and javascript.
 ### TODO
 
 * this plugin needs an admin page, so you can specify the exact commandline
-    * would allow use of other markdown converters (like
+    * could allow use of other markdown converters (like
       [kramdown](http://kramdown.gettalong.org/))
-    * would allow setting of specific options, which are currently
+    * could allow setting of specific options, which are currently
       hardcoded (meta-TODO: add a link)
+    * could allow specification of the highlightjs style (currently
+      solarized light)
 * comments are saved as HTML, not in their original form. This is also true
   of the unmodified plugin.
 * math in comments is not correctly transformed, or at least,
