@@ -18,10 +18,6 @@ change is the inclusion of relevant stylesheets and javascript.
       hardcoded (meta-TODO: add a link)
     * could allow specification of the highlightjs style (currently
       solarized light)
-* comments are saved as HTML, not in their original form. This is also true
-  of the unmodified plugin.
-* math in comments is not correctly transformed, or at least,
-  [mathjax](http://www.mathjax.org/) doesn't think it is.
 
 ### Acknowledgement (and for future reference)
 
