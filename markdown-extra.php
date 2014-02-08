@@ -92,9 +92,8 @@ if (isset($wp_version)) {
 	if (MARKDOWN_WP_COMMENTS) {
 		remove_filter('comment_text', 'wpautop', 30);
 		remove_filter('comment_text', 'make_clickable');
-		add_filter('pre_comment_content', 'Markdown', 6);
-		add_filter('get_comment_text',    'Markdown', 6);
-		add_filter('get_comment_excerpt', 'Markdown', 6);
+
+		add_filter('comment_text', 'mdwp_MarkdownPost', 6);
 
 		global $mdwp_hidden_tags, $mdwp_placeholders;
 		$mdwp_hidden_tags = explode(' ',
