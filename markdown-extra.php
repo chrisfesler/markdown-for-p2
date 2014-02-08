@@ -188,10 +188,9 @@ class Markdown_Parser {
 		$this->setup();
     $this->teardown();
 
-    #add_action( 'wp_enqueue_scripts', 'load_md_scripts' );
-
+    # --no-highlight because we want highlightjs to do our highlighting for us
+    # 2>&1 because we want to see pandoc errors in the browser (and least while developing)
     $cmd = "/usr/local/bin/pandoc -r markdown -w html --mathjax --no-highlight 2>&1";
-    # --highlight-style=kate
 
     $descriptorspec = array(
        0 => array("pipe", "r"),
@@ -202,7 +201,6 @@ class Markdown_Parser {
 
     if (is_resource($process)) {
 
-        //row2xfdf is made-up function that turns HTML-form data to XFDF
         fwrite($pipes[0], $text);
         fclose($pipes[0]);
 
@@ -211,6 +209,7 @@ class Markdown_Parser {
 
         $return_value = proc_close($process);
 
+        # this is probably totally the wrong way to initialize highlightjs, but it works
         return '<script>hljs.initHighlightingOnLoad();</script> ' . $md_out;
     }
     else {
