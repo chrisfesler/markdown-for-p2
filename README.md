@@ -18,6 +18,12 @@ change is the inclusion of relevant stylesheets and javascript.
       hardcoded (meta-TODO: add a link)
     * could allow specification of the highlightjs style (currently
       solarized light)
+* MathJax needs to be refreshed after post. We do this in a slightly janky
+  way (mostly because of personal jquery lameitude) already for highlightjs.
+  As it is, a post or comment containing math won't render 'til we refresh
+  See [the highlightjs
+  re-init](https://github.com/chrisfesler/markdown-for-p2/blob/master/markdown-extra.php#L211-L216)
+  for how we deal with (what I assume is) the same problem w/ highlightjs.
 
 ### Acknowledgement (and for future reference)
 
