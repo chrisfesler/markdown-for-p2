@@ -213,7 +213,10 @@ class Markdown_Parser {
         #   https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js#L552-L559
         # I'm kind of tempted to try to grab the right elements and call highlightBlock
         # myself, but I'm just not that cool. This works.
-        return '<script><!-- hljs.initHighlighting.called = false; hljs.initHighlighting(); --></script> ' . $md_out;
+        $update_highlight = 'hljs.initHighlighting.called = false; hljs.initHighlighting();';
+        $update_math = 'MathJax.Hub.Queue(["Typeset",MathJax.Hub]);';
+        $script_elt = '<script> <!-- ' . $update_math . ' ' . $update_highlight . ' --></script>';
+        return $script_elt . $md_out;
     }
     else {
       return "fail";
