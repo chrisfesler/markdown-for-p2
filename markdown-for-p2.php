@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Markdown for P2
-Plugin URI: http://wordpress.org/extend/markdown-for-p2
-Description: Markdown for P2 will enable Markdown formatting within your P2 theme status updates and comments.
+Plugin URI: http://github.com/chrisfesler/markdown-for-p2
+Description: Markdown for P2 (fork) offloads formatting to pandoc, mathjax, and highlightjs
 Version: 0.1.1
-Author: Ryan Imel
-Author URI: http://wpcandy.com
+Author: Ryan Imel (modified by Chris Fesler)
+Author URI: http://github.com/chrisfesler
 License: GPL
 
 PHP Markdown & Extra
