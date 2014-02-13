@@ -44,6 +44,7 @@ function markdown_for_p2_content_comment_format( $text ) {
 }
 
 function load_md_scripts() {
+  wp_enqueue_script( 'p2_format_posts', plugins_url( '/js/p2_format_posts.js', __FILE__ ), array( 'jquery' ) );
   wp_enqueue_script( 'mathjax', plugins_url( '/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML', __FILE__ ), false );
   wp_enqueue_script( 'highlight_js', plugins_url( '/lib/highlight/highlight.pack.js', __FILE__ ), false );
   wp_enqueue_style( 'highlight_css', plugins_url( '/lib/highlight/styles/solarized_light.css', __FILE__ ), false );

@@ -61,12 +61,12 @@ if (isset($wp_version)) {
 		add_filter('the_content',     'mdwp_MarkdownPost', 6);
     add_filter('the_content_rss', 'mdwp_MarkdownPost', 6);
 		add_filter('get_the_excerpt', 'mdwp_MarkdownPost', 6);
-		add_filter('get_the_excerpt', 'trim', 7);
+		#add_filter('get_the_excerpt', 'trim', 7);
 
 		remove_filter('content_save_pre',  'balanceTags', 50);
 		remove_filter('excerpt_save_pre',  'balanceTags', 50);
-		add_filter('the_content',  	  'balanceTags', 50);
-		add_filter('get_the_excerpt', 'balanceTags', 9);
+		#add_filter('the_content',  	  'balanceTags', 50);
+		#add_filter('get_the_excerpt', 'balanceTags', 9);
 	}
 
 	# Add a footnote id prefix to posts when inside a loop.
@@ -208,17 +208,7 @@ class Markdown_Parser {
 
         $return_value = proc_close($process);
 
-        # this is probably totally the wrong way to initialize highlightjs, but it works
-        # The relevant highlightjs lines are:
-        #   https://github.com/isagalaev/highlight.js/blob/master/src/highlight.js#L552-L559
-        # I'm kind of tempted to try to grab the right elements and call highlightBlock
-        # myself, but I'm just not that cool. This works.
-        $init_highlight = "jQuery( document ).ready( function() { hljs.initHighlighting.called = false; hljs.initHighlighting() } );";
-        $update_highlight = 'hljs.initHighlighting.called = false; hljs.initHighlighting();';
-        $update_math = "MathJax.Hub.Queue(['Typeset',MathJax.Hub]);";
-        $console_log = ""; #  \r\nconsole.log('ran mathjax and highlightjs');";
-        $script_elt = "\r\n<script type=\"text/javascript\">\r\n<!--\r\n" . $init_highlight . "\r\n" . $update_math . "\r\n" . $update_highlight . $console_log . "\r\n-->\r\n</script>\r\n";
-        return $md_out . $script_elt ;
+        return $md_out;
     }
     else {
       return "fail";
