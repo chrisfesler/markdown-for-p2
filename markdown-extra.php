@@ -216,8 +216,9 @@ class Markdown_Parser {
         $init_highlight = "jQuery( document ).ready( function() { hljs.initHighlighting.called = false; hljs.initHighlighting() } );";
         $update_highlight = 'hljs.initHighlighting.called = false; hljs.initHighlighting();';
         $update_math = "MathJax.Hub.Queue(['Typeset',MathJax.Hub]);";
-        $script_elt = "<script>\r\n" . $init_highlight . "\r\n" . $update_math . "\r\n" . $update_highlight . "\r\n</script>";
-        return $script_elt . $md_out;
+        $console_log = ""; #  \r\nconsole.log('ran mathjax and highlightjs');";
+        $script_elt = "\r\n<script type=\"text/javascript\">\r\n<!--\r\n" . $init_highlight . "\r\n" . $update_math . "\r\n" . $update_highlight . $console_log . "\r\n-->\r\n</script>\r\n";
+        return $md_out . $script_elt ;
     }
     else {
       return "fail";
