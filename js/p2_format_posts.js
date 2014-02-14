@@ -7,7 +7,10 @@
 // expensive to render MathJax, but it's a possible target for future
 // optimization
 
-jQuery( document ).ready( p2FormatPosts );
+jQuery( document ).ready( function(e) {
+  // console.log('document ready, running p2FormatPosts()');
+  p2FormatPosts();
+});
 
 jQuery( document ).ajaxSuccess( function(e) {
   // console.log(e);
